@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item{
+    position: relative;
+    height:80%;
+    width:6%;
+    background:url(https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right:20px;
+    border-radius:60px;
+    border:none;    
+    cursor: pointer;
+    transition: width 700ms ease-in;
+}
+
+.active{
+    width: 50%;
+}
+
+.two{
+    background:url(https://images.pexels.com/photos/789750/pexels-photo-789750.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.three{
+    background:url(https://images.pexels.com/photos/574313/pexels-photo-574313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.four{
+    background:url(https://wallpapercave.com/wp/wp4109816.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.five{
+    background:url(https://i.pinimg.com/originals/45/1f/65/451f65cd9bd4b8b855cca534dde6156f.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+span{
+    color:white;
+    font-size:30px;
+    font-family: 'Poppins',sans-serif;
+    position: absolute;
+    bottom:40px;
+    left:50px;
+    opacity: 0;
+    text-shadow: 2px 2px 12px #000;
+}
+
+.visible{
+    opacity: 1;
+    transition: opacity 900ms ease-in;
+    transition-delay: 200ms;
+}
