@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    overflow-x: hidden;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child{
+    width:50vw;
+    height:100vh;
+    /* background-position: top; */
+    background-size: cover;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: width 0.8s linear;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ps5{
+    background-image:linear-gradient(-40deg,rgba(33, 71, 216, 1),rgba(33, 71, 236, 0.5)), url(https://images.pexels.com/photos/5961235/pexels-photo-5961235.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+}
+
+.xbox{
+    background-image:linear-gradient(-40deg,rgb(5, 87, 5,1),rgb(27, 226, 7,0.2)),  url(https://www.mkaugaming.com/wp-content/uploads/2019/12/2019-12-13_00022.jpg);
+}
+
+.title{
+    color:#fff;
+    text-align: center;
+    font-size:50px;
+    margin-bottom: 25px;
+}
+
+.buy{
+    cursor: pointer;
+    border:3.5px solid #fff;
+    text-transform: uppercase;
+    color:#fff;
+    padding: 30px 40px;
+    width:75%;
+    background: transparent;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ps5 .buy:hover{
+    background:rgb(33, 71, 216);
+    border-color: rgb(33, 71, 216);
+}
+
+.xbox .buy:hover{
+    background:rgb(5, 87, 5);
+    border-color:rgb(5, 87, 5);
+}
+
+
+@media screen and (max-width:600px) {
+    .title{
+        font-size:35px;
+    }
+
+    .buy{
+        padding:15px 20px;
+        font-size: 16px;
+    }
+}
