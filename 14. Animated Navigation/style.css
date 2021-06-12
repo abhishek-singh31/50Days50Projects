@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  outline:0;
+}
+
+body{
+  min-height:100vh;
+  background-image:linear-gradient(to bottom, #e1e5e1 0%,#e1e5e1 50%,#02475e 50%,#02475e 100%);
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.nav-bar{
+  width:80px;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  border-radius:5px;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.5);
+  transition: width 600ms linear;
+}
+
+.nav-bar.active{
+  width:350px;
+}
+
+.nav-bar ul{
+  list-style-type:none;
+  display:flex;
+  width:0;
+  transition:width 600ms linear;
+}
+
+.nav-bar.active ul{
+  width:100%;
+}
+
+.nav-bar ul li{
+  opacity:0;
+  transform:rotateY(0deg);
+  transition: transform 600ms linear,opacity 600ms linear;
+}
+
+.nav-bar.active ul li{
+  opacity:1;
+  transform:rotateY(360deg);
+}
+
+.nav-bar ul li a{
+  color:#000;
+  text-decoration:none;
+  position:relative;
+  margin:0 10px;
+}
+
+button{
+  background:#fff;
+  border:0;
+  width:30px;
+  height:30px;
+  cursor:pointer;
+  position:relative;
+}
+
+button div{
+  height:2px;
+  width:20px;
+  position:absolute;
+  top:10px;
+  left:5px;
+  background:#02475e;
+  transition:transform 600ms linear;
+}
+
+button div.lower{
+  top:auto;
+  bottom:10px;
+}
+
+.nav-bar.active div.lower{
+  transform:rotate(-765deg) translateY(-5.5px);
+  transition:transform 600ms linear;
+}
+.nav-bar.active div.upper{
+  transform:rotate(765deg) translateY(5.5px);
+  transition:transform 600ms linear;
+}
